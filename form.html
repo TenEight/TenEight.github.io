@@ -82,7 +82,7 @@
      <h2></h2>  
      <p id="failure">Oops, something went wrong.</p>  
      <p id="success">Your request has been submitted!</p>  
-     <form method="post" action="http://formspree.io/teneighttools@gmail.com" onSubmit="return checkFields(); window.close;">  
+     <form method="post" action="http://formspree.io/teneighttools@gmail.com">  
         <p><label for="name">Name: <span class="required">*</span></label>  
         <input type="text" id="name" name="name" value="" placeholder="Your name" required="required" autofocus="autofocus" />  
           
@@ -109,8 +109,11 @@
           
         <p><label for="message">Message: <span class="required">*</span></label>  
         <textarea id="message" name="message" placeholder="Tell me a little about how we can help!" required="required"></textarea>  
+
+           <input type="hidden" name="_next" value="http://www.teneighttools.com" />
+           <input type="text" name="_gotcha" style="display:none" />
            
         <p><input type="submit" value="Submit Form" id="submit" /> 
-        <input type="hidden" name="_next" value="http://www.teneighttools.com" />
+
      </form>  
   </div>
